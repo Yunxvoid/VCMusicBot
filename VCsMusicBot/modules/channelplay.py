@@ -606,7 +606,7 @@ async def play(_, message: Message):
         return await lel.delete()
 
 
-@Client.on_message(filters.command(["channeldplay","cdplay"]) & filters.group & ~filters.edited)
+@Client.on_message(filters.command(["channeldplay","cdplay"]) & filters.group)
 @authorized_users_only
 async def deezer(client: Client, message_: Message):
     global que
