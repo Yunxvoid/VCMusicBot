@@ -730,7 +730,7 @@ async def play(_, message: Message):
         return await lel.delete()
 
 
-@Client.on_message(filters.command("ytplay") & filters.group & ~filters.edited)
+@Client.on_message(filters.command("ytplay") & filters.group)
 async def ytplay(_, message: Message):
     global que
     if message.chat.id in DISABLED_GROUPS:
